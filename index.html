@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gazellix LLC – Animal Husbandry</title>
+<meta name="description" content="Gazellix LLC supports farms and ranches with livestock breeding, nutrition, herd health and pasture management. Based in Sheridan, Wyoming.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#F1F4EC; --surface:#E4EADB; --ink:#1B2A21; --muted:#4F6055;
+  --brand:#23452F; --brand-ink:#F1F4EC; --hay:#C98F1E; --line:#C9D3BF;
+  --hero:#23452F; --hero-ink:#F1F4EC; --hill1:#2F5A3E; --hill2:#3D6B49;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A15; --surface:#1B261F; --ink:#E8EEE3; --muted:#A3B2A7;
+    --brand:#E0B04A; --brand-ink:#18200F; --hay:#E0B04A; --line:#2B3A30;
+    --hero:#0D1410; --hero-ink:#E8EEE3; --hill1:#1A2C20; --hill2:#223A29;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A15; --surface:#1B261F; --ink:#E8EEE3; --muted:#A3B2A7;
+  --brand:#E0B04A; --brand-ink:#18200F; --hay:#E0B04A; --line:#2B3A30;
+  --hero:#0D1410; --hero-ink:#E8EEE3; --hill1:#1A2C20; --hill2:#223A29;
+}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hay);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:700 1.35rem "Bricolage Grotesque",Georgia,serif;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--hay)}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero .wrap{padding-top:88px;padding-bottom:230px;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem);font-weight:700;letter-spacing:-.03em;max-width:13ch}
+.hero p{max-width:46ch;font-size:1.2rem;margin:26px 0 34px;opacity:.9}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--hay);color:#1B1606;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor;margin-left:10px}
+.hills{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:210px;z-index:1}
+section{padding:84px 0}
+section h2{font-size:clamp(1.9rem,4vw,2.8rem);letter-spacing:-.02em;margin-bottom:14px}
+.lead{max-width:60ch;color:var(--muted);margin:0 0 40px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start}
+.about ul{list-style:none;margin:0;padding:0;border-left:4px solid var(--hay)}
+.about li{padding:6px 0 6px 20px;font-weight:500}
+.services{background:var(--surface)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:1px solid var(--line)}
+.svc{padding:30px 28px 34px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:1.4rem;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--brand);color:var(--brand-ink);font:700 1.05rem "Bricolage Grotesque",serif;margin-bottom:14px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted)}
+.contact{background:var(--hero);color:var(--hero-ink)}
+.contact .lead{color:inherit;opacity:.85}
+.cgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+.cinfo dt{font-weight:600;color:var(--hay);margin-top:20px}
+.cinfo dd{margin:2px 0 0;font-style:normal}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+input,textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1.5px solid rgba(241,244,236,.35);background:rgba(255,255,255,.07);color:inherit;width:100%}
+input::placeholder,textarea::placeholder{color:rgba(241,244,236,.55)}
+textarea{min-height:120px;resize:vertical}
+.note{font-size:.88rem;opacity:.75;margin:0}
+footer{padding:28px 0;font-size:.92rem;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:760px){
+  .about,.cgrid{grid-template-columns:1fr;gap:36px}
+  nav{gap:14px}
+  nav a{font-size:.9rem}
+  .hero .wrap{padding-top:56px;padding-bottom:190px}
+  section{padding:60px 0}
+  .btn.ghost{margin:10px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Gazellix<span>.</span></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>Healthy herds. Stronger farms.</h1>
+    <p>Gazellix LLC helps farmers and ranchers raise healthier livestock through smart breeding, balanced nutrition and well-managed pasture.</p>
+    <a class="btn" href="#contact">Talk to our team</a>
+    <a class="btn ghost" href="#services">See our services</a>
+  </div>
+  <svg class="hills" viewBox="0 0 1200 210" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--hill1)" d="M0 120 C180 40 340 40 520 100 C700 160 860 60 1200 90 L1200 210 L0 210Z"/>
+    <path fill="var(--hill2)" d="M0 160 C220 110 400 130 600 150 C800 170 1000 110 1200 140 L1200 210 L0 210Z"/>
+    <path fill="var(--bg)" d="M0 195 C300 170 700 200 1200 178 L1200 210 L0 210Z"/>
+  </svg>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>Animal husbandry, done with care</h2>
+      <p>Gazellix LLC is an animal husbandry company based in Sheridan, Wyoming. We work with producers to raise animals responsibly, keep herds productive and make daily farm decisions easier.</p>
+      <p>Every farm is different. We start with your land, your animals and your goals, then build a plan that fits.</p>
+    </div>
+    <ul>
+      <li>Animal welfare comes first</li>
+      <li>Practical advice you can use on the farm</li>
+      <li>Plans built around your operation</li>
+      <li>Clear, honest communication</li>
+    </ul>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="lead">From the first breeding decision to the daily feed ration, we support each stage of raising livestock.</p>
+    <div class="grid">
+      <div class="svc"><h3>Livestock breeding</h3><p>Breeding programs that improve herd quality, fertility and long-term performance.</p></div>
+      <div class="svc"><h3>Feed and nutrition</h3><p>Rations matched to each animal’s age, purpose and season, so feed goes further.</p></div>
+      <div class="svc"><h3>Herd health</h3><p>Prevention routines, monitoring and record keeping that catch problems early.</p></div>
+      <div class="svc"><h3>Pasture management</h3><p>Grazing plans that protect your land and keep forage growing season after season.</p></div>
+      <div class="svc"><h3>Housing and handling</h3><p>Low-stress handling and housing advice that keeps animals calm and workers safe.</p></div>
+      <div class="svc"><h3>Farm consulting</h3><p>Hands-on guidance for new and established producers who want to grow with confidence.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <h2>How we work with you</h2>
+    <p class="lead">A simple process, so you always know what comes next.</p>
+    <ol class="steps">
+      <li><h3>Listen</h3><p>We learn about your animals, land and goals.</p></li>
+      <li><h3>Assess</h3><p>We review herd health, feed and pasture conditions.</p></li>
+      <li><h3>Plan</h3><p>You get a clear plan with priorities and timelines.</p></li>
+      <li><h3>Support</h3><p>We follow up and adjust as your farm changes.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap cgrid">
+    <div>
+      <h2>Contact us</h2>
+      <p class="lead">Tell us about your farm and we will get back to you.</p>
+      <dl class="cinfo">
+        <dt>Address</dt><dd>Gazellix LLC<br>30 N Gould St, Ste R<br>Sheridan, WY 82801, United States</dd>
+        <dt>Phone</dt><dd><a href="tel:+13218046414">+1 (321) 804-6414</a></dd>
+        <dt>Email</dt><dd><a href="mailto:Contact@Gazellix.site">Contact@Gazellix.site</a></dd>
+        <dt>Website</dt><dd><a href="https://Gazellix.site">Gazellix.site</a></dd>
+      </dl>
+    </div>
+    <form id="f">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+      <label>How can we help?<textarea name="msg" required placeholder="Type of animals, herd size, what you need"></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="note">This opens your email app with your message ready to send.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Gazellix LLC. All rights reserved.</span>
+    <span>30 N Gould St Ste R, Sheridan, WY 82801</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target);
+  var body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+(d.get('phone')||'-')+'\n\n'+d.get('msg');
+  location.href='mailto:Contact@Gazellix.site?subject='+encodeURIComponent('Website enquiry from '+d.get('name'))+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
